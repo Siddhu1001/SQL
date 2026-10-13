@@ -1,0 +1,1111 @@
+CREATE TABLE customersg (
+    cid           NUMBER(4),
+    cname         VARCHAR2(30),
+    cadd          VARCHAR2(20),
+    c_contact     NUMBER(10),
+    c_creditdays  NUMBER(3),
+    cj_date       DATE,
+    sex           VARCHAR2(6),
+    CONSTRAINT pk_customers PRIMARY KEY (cid)
+);
+
+SELECT * FROM customersg
+
+INSERT INTO customersg VALUES
+(1001, 'Cyona Blake', 'NEW YORK', 1235684, 20,
+ TO_DATE('20-Jan-11','DD-MON-YY'), 'FEMALE');
+
+INSERT INTO customersg VALUES
+(1002, 'JOHN SMITH', 'NEW JERST', 1341684, 20,
+ TO_DATE('21-Feb-11','DD-MON-YY'), 'MALE');
+
+INSERT INTO customersg VALUES
+(1003, 'JORDAN WOOD', 'PRAG', 1805184, 20,
+ TO_DATE('22-Mar-11','DD-MON-YY'), 'MALE');
+
+INSERT INTO customersg VALUES
+(1004, 'CHRISTINA', 'MANHATTON', 1125684, 31,
+ TO_DATE('23-Apr-13','DD-MON-YY'), 'FEMALE');
+
+INSERT INTO customersg VALUES
+(1005, 'TOM HILL', 'LONDON', 1239284, 10,
+ TO_DATE('25-Jun-15','DD-MON-YY'), 'MALE');
+
+INSERT INTO customersg VALUES
+(1006, 'KAMILA JOSEF', 'PARISE', 124568, 9,
+ TO_DATE('28-Jul-11','DD-MON-YY'), 'FEMALE');
+
+INSERT INTO customersg VALUES
+(1007, 'ANDRU SYMON', 'TAXES', 125654, 15,
+ TO_DATE('01-Apr-16','DD-MON-YY'), 'MALE');
+
+INSERT INTO customersg VALUES
+(1008, 'SANJU SAMSUNG', 'NEW YORK', 12346341, 4,
+ TO_DATE('20-Jan-16','DD-MON-YY'), 'MALE');
+---------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+CREATE TABLE vendors (
+    vid           NUMBER(4),
+    vname         VARCHAR2(30),
+    vadd          VARCHAR2(20),
+    vcontact      NUMBER(10),
+    vcreditdays   NUMBER(3),
+    vj_date       DATE,
+    CONSTRAINT pk_vendors PRIMARY KEY (vid)
+);
+
+SELECT * FROM vendors
+
+INSERT INTO vendors VALUES
+(2001, 'KIRAN PATIL', 'PUNE', 20535535, 20,
+ TO_DATE('20-Jan-10','DD-MON-YY'));
+
+INSERT INTO vendors VALUES
+(2002, 'PRAKASH JAIN', 'MUMBAI', 2063564, 10,
+ TO_DATE('05-Nov-11','DD-MON-YY'));
+
+INSERT INTO vendors VALUES
+(2003, 'SWAPNIL THETE', 'NASHIK', 25355352, 15,
+ TO_DATE('18-Mar-10','DD-MON-YY'));
+
+INSERT INTO vendors VALUES
+(2004, 'AMOL SHENDE', 'SATARA', 23674776, 18,
+ TO_DATE('07-Apr-15','DD-MON-YY'));
+
+INSERT INTO vendors VALUES
+(2005, 'KARAN SINTRE', 'BULDHANA', 256756, 30,
+ TO_DATE('22-Apr-09','DD-MON-YY'));
+
+INSERT INTO vendors VALUES
+(2006, 'RAM KULKARNI', 'OSMANABAD', 20367454, 21,
+ TO_DATE('09-Jul-10','DD-MON-YY'));
+-----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+CREATE TABLE employeeg (
+    eid       NUMBER(4),
+    ename     VARCHAR2(30),
+    ejob      VARCHAR2(15),
+    eadd      VARCHAR2(20),
+    econtact  NUMBER(10),
+    esal      NUMBER(8),
+    edoj      DATE,
+    edol      DATE,
+    CONSTRAINT pk_employeeg PRIMARY KEY (eid)
+);
+
+SELECT * FROM employeeg
+
+INSERT INTO employeeg VALUES
+(3001, 'STEVEN KING', 'PAINTER', 'NEW YORK', 10367454, 1200,
+ TO_DATE('09-Jul-10','DD-MON-YY'), NULL);
+
+INSERT INTO employeeg VALUES
+(3002, 'DAVID AUSTIN', 'FITTER', 'MAN HATON', 10367434, 1100,
+ TO_DATE('19-Aug-10','DD-MON-YY'), NULL);
+
+INSERT INTO employeeg VALUES
+(3003, 'BRUCE ERNST', 'MECHANIC', 'NEW JERCY', 10367264, 2200,
+ TO_DATE('08-Sep-10','DD-MON-YY'), NULL);
+
+INSERT INTO employeeg VALUES
+(3004, 'LUIS POPP', 'MECHANIC', 'NEW JERCY', 10367264, 1700,
+ TO_DATE('19-Oct-09','DD-MON-YY'),
+ TO_DATE('06-Sep-10','DD-MON-YY'));
+ 
+
+INSERT INTO employeeg VALUES
+(3005, 'SHERI GOMES', 'FITTER', 'PARIS', 10327264, 1000,
+ TO_DATE('19-Oct-09','DD-MON-YY'),
+ TO_DATE('01-Aug-10','DD-MON-YY'));
+
+INSERT INTO employeeg VALUES
+(3000, 'JAMES PHILLIP', 'FITTER', 'PARIS', 10322264, NULL,
+ TO_DATE('01-Jan-08','DD-MON-YY'), NULL);
+-------------------------------------------------------------------------------------
+CREATE TABLE spareparts (
+    spid     NUMBER(4),
+    spname   VARCHAR2(40),
+    sprate   NUMBER(8),
+    spunit   VARCHAR2(10),
+    CONSTRAINT pk_spareparts PRIMARY KEY (spid)
+);
+
+SELECT * FROM spareparts
+
+INSERT INTO spareparts VALUES (4001, 'TWO WHEELER TUBE', 250, 'NOS');
+INSERT INTO spareparts VALUES (4002, 'TWO WHEELER ENGINE OIL', 400, 'LTRS');
+INSERT INTO spareparts VALUES (4003, 'FOUR WHEELER ENGINE OIL', 5000, 'LTRS');
+INSERT INTO spareparts VALUES (4004, 'TWO WHEELER CARBORATOR', 680, 'NOS');
+INSERT INTO spareparts VALUES (4005, 'TWO WHEELER CLUTCH WIRE', 129, 'MTRS');
+INSERT INTO spareparts VALUES (4006, 'TWO WHEELER TAIL LIGHT', 100, 'NOS');
+INSERT INTO spareparts VALUES (4007, 'TWO WHEELER INDICATORS', 150, 'NOS');
+INSERT INTO spareparts VALUES (4008, 'FOUR WHEELER GASKIT', 1340, 'NOS');
+INSERT INTO spareparts VALUES (4009, 'WHITE COLOUR', 340, 'LTRS');
+INSERT INTO spareparts VALUES (4010, 'BLACK COLOUR', 240, 'LTRS');
+INSERT INTO spareparts VALUES (4011, 'TWO WHEELER SIDE MIRROR', 250, 'NOS');
+INSERT INTO spareparts VALUES (4012, 'FOUR WHEELER SIDE MIRROR', 450, 'NOS');
+INSERT INTO spareparts VALUES (4013, 'TWO WHEELER SHOCKUP', 1320, 'PAIR');
+INSERT INTO spareparts VALUES (4014, 'FOUR WHEELER BUMPER', 6000, 'NOS');
+INSERT INTO spareparts VALUES (4015, 'FOUR WHEELER FRONT GLASS', 7000, 'PCS');
+-------------------------------------------------------------------------------------
+CREATE TABLE purchase (
+    pid        NUMBER(4) PRIMARY KEY,
+    vid        NUMBER(4),
+    spid       NUMBER(4),
+    pqty       NUMBER(5),
+    sprate     NUMBER(8),
+    spgst      NUMBER(8,2),
+    pdate      DATE,
+    trancost   NUMBER(8),
+    total      NUMBER(10,2),
+    rcv_eid    NUMBER(4),
+
+    CONSTRAINT fk_purchase_vid
+        FOREIGN KEY (vid)
+        REFERENCES vendors (vid),
+
+    CONSTRAINT fk_purchase_spid
+        FOREIGN KEY (spid)
+        REFERENCES spareparts (spid),
+
+    CONSTRAINT fk_purchase_eid
+        FOREIGN KEY (rcv_eid)
+        REFERENCES employeeg (eid)
+);
+
+SELECT * FROM purchase
+
+INSERT INTO purchase VALUES
+(5001, 2001, 4001, 10, 250, 350, TO_DATE('01-Jan-11','DD-MON-YY'), 1300, 4150, 3001);
+
+INSERT INTO purchase VALUES
+(5002, 2002, 4002, 4, 400, 288, TO_DATE('02-Mar-11','DD-MON-YY'), 100, 1988, 3001);
+
+INSERT INTO purchase VALUES
+(5003, 2003, 4004, 8, 680, 761.6, TO_DATE('12-Jun-11','DD-MON-YY'), 50, 6251.6, 3003);
+
+INSERT INTO purchase VALUES
+(5004, 2004, 4005, 10, 129, 154.8, TO_DATE('22-Aug-11','DD-MON-YY'), 125, 1569.8, 3004);
+
+INSERT INTO purchase VALUES
+(5005, 2005, 4006, 20, 100, 300, TO_DATE('07-Sep-11','DD-MON-YY'), 20, 2320, 3003);
+
+INSERT INTO purchase VALUES
+(5006, 2006, 4007, 30, 150, 630, TO_DATE('12-Oct-11','DD-MON-YY'), 60, 5190, 3000);
+
+INSERT INTO purchase VALUES
+(5007, 2001, 4003, 20, 5000, 14000, TO_DATE('07-Sep-11','DD-MON-YY'), 1000, 115000, 3000);
+INSERT INTO purchase VALUES
+(5008, 2006, 4005, 1, 129, 15.48, TO_DATE('12-Oct-11','DD-MON-YY'), 50, 194.48, 3005);
+
+INSERT INTO purchase VALUES
+(5009, 2006, 4005, 1, 129, 15.48, TO_DATE('15-Oct-11','DD-MON-YY'), 50, 194.48, 3005);
+
+INSERT INTO purchase VALUES
+(5010, 2006, 4009, 5, 340, 238, TO_DATE('20-Oct-11','DD-MON-YY'), 0, 2938, 3005);
+--------------------------------------------------------------------------------------
+CREATE TABLE ser_det (
+    sid        NUMBER(4) PRIMARY KEY,
+    cid        NUMBER(4),
+    eid        NUMBER(4),
+    spid       NUMBER(4),
+    typ_veh    VARCHAR2(15),
+    veh_no     VARCHAR2(15),
+    typ_ser    VARCHAR2(30),
+    ser_date   DATE,
+    qty        NUMBER(5,2),
+    sp_rate    NUMBER(8),
+    sp_amt     NUMBER(10,2),
+    sp_gst     NUMBER(8,2),
+    ser_amt    NUMBER(10,2),
+    comm       NUMBER(8,2),
+    total      NUMBER(10,2),
+
+
+    CONSTRAINT fk_ser_det_cid
+        FOREIGN KEY (cid)
+        REFERENCES customersg (cid),
+
+    CONSTRAINT fk_ser_det_eid
+        FOREIGN KEY (eid)
+        REFERENCES employeeg (eid),
+
+    CONSTRAINT fk_ser_det_spid
+        FOREIGN KEY (spid)
+        REFERENCES spareparts (spid)
+);
+SELECT * FROM ser_det;
+
+INSERT INTO ser_det VALUES
+(6001, 1001, 3001, 4001, 'TWO WHEELER', 'MH15CA3228',
+ 'TUBE DAMAGED', TO_DATE('02-Jan-11','DD-MON-YY'),
+ 1, 250, 250, 35, 50, 0, 335);
+
+INSERT INTO ser_det VALUES
+(6002, 1002, 3002, 4002, 'TWO WHEELER', 'MH16U5713',
+ 'FULL SERVICING', TO_DATE('04-Mar-11','DD-MON-YY'),
+ 1, 400, 400, 52, 300, 50, 752);
+
+INSERT INTO ser_det VALUES
+(6003, 1003, 3004, 4005, 'TWO WHEELER', 'MH12PQ1313',
+ 'CLUTCH WIRE', TO_DATE('22-Aug-11','DD-MON-YY'),
+ 1, 129, 129, 0, 10, 0, 139);
+
+INSERT INTO ser_det VALUES
+(6004, 1002, 3002, 4002, 'TWO WHEELER', 'MH16U5713',
+ 'FULL SERVICING', TO_DATE('05-May-11','DD-MON-YY'),
+ 1, 400, 400, 52, 300, 50, 752);
+
+INSERT INTO ser_det VALUES
+(6005, 1004, 3001, 4009, 'TWO WHEELER', 'MH14PA335',
+ 'COLOR', TO_DATE('21-Oct-11','DD-MON-YY'),
+ 2.5, 340, 850, 119, 500, 150, 1469);
+
+INSERT INTO ser_det VALUES
+(6006, 1006, 3001, 4009, 'TWO WHEELER', 'MH12WE334',
+ 'COLOR', TO_DATE('01-Dec-11','DD-MON-YY'),
+ 2.5, 340, 850, 119, 500, 150, 1469);
+
+INSERT INTO ser_det VALUES
+(6007, 1007, 3001, 4001, 'FOUR WHEELER', 'MH17BB1345',
+ 'TUBE DAMAGED', TO_DATE('01-Jan-12','DD-MON-YY'),
+ 1, 250, 250, 35, 150, 0, 435);
+
+SELECT * FROM ser_det
+----------------------------------------------------------------------------------------
+SELECT constraint_name, constraint_type
+FROM user_constraints
+WHERE table_name = 'SER_DET';
+
+SELECT * FROM ser_det
+-----------------------------------------------------------------------------------------
+--Q.1 List all the customers serviced.
+
+SELECT  DISTINCT c.cname,
+       c.c_contact,
+       s.cid
+FROM customersg c 
+JOIN ser_det s
+ON s.cid = c.cid;
+
+SELECT cname FROM customersg
+WHERE cid IN (SELECT cid FROM ser_det);
+
+SELECT * FROM customersg
+--Q.2 Customers who are not serviced.
+
+SELECT c.cname
+FROM customersg c
+LEFT JOIN ser_det s
+ON c.cid = s.cid
+WHERE s.cid IS NULL;
+
+
+SELECT cname FROM customersg  --SubQuery
+WHERE cid NOT IN (SELECT cid 
+                   FROM ser_det);
+
+SELECT cname FROM customersg c   --Corelated
+WHERE NOT EXISTS (SELECT 1
+                  FROM ser_det s
+                  WHERE c.cid = s.cid);
+
+--Q.3 Employees who have not received the commission.
+
+SELECT DISTINCT e.ename,
+       e.eid, 
+       s.comm
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid
+WHERE comm = 0
+OR comm IS NULL;
+
+SELECT  * FROM ser_det
+
+SELECT ename  FROM employeeg
+WHERE eid IN (SELECT eid 
+               FROM ser_det
+               WHERE comm IS NULL 
+               OR comm = 0);
+
+SELECT ename FROM employeeg e
+WHERE EXISTS (SELECT 1
+             FROM ser_det s
+             WHERE s.eid = e.eid
+             AND comm = 0 OR comm IS NULL);
+
+--Q.4 Name the employee who have maximum Commission.
+
+SELECT DISTINCT e.ename
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid
+WHERE comm = (SELECT MAX(comm) 
+              FROM ser_det) ;
+              
+SELECT * FROM ser_det
+--When you need to select single max go with subquery
+SELECT DISTINCT ename FROM employeeg
+WHERE eid IN (SELECT eid FROM ser_det
+              WHERE comm = (SELECT MAX(comm) FROM ser_det)); 
+      
+--Q.5 Show employee name and minimum commission amount received by an employee.
+
+SELECT DISTINCT e.ename,
+       s.comm AS min_comm
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid  --( we use sbuquery with join to find single Min and Max)
+WHERE s.comm = (SELECT MIN(comm) FROM ser_det);
+
+SELECT DISTINCT ename FROM employeeg
+WHERE eid IN (SELECT eid FROM ser_det --(using subquery)
+              WHERE comm =(SELECT MIN(comm) 
+                          FROM ser_det));
+
+SELECT DISTINCT e.ename,
+       min(s.comm) AS min_comm
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid  --(min per group)
+GROUP BY e.ename;
+             
+--Q.6 Display the Middle record from any table.
+
+SELECT eid,esal
+FROM( SELECT eid,esal,
+      row_number() OVER (ORDER BY esal) AS rn,
+      COUNT(*) OVER () cnt
+      FROM employeeg )
+WHERE rn = CEIL(cnt / 2);    --(inline view)
+
+SELECT eid
+FROM (SELECT eid,
+      row_number() OVER(ORDER BY eid) AS rn,
+      COUNT(*) OVER() cnt
+      FROM employeeg)
+WHERE rn = CEIL(cnt/2)
+
+SELECT * FROM employeeg
+
+SELECT MAX(esal) FROM employeeg
+WHERE esal < (SELECT MAX(esal) FROM employeeg);
+--Q.7 Display last 4 records of any table.
+SELECT *
+FROM (SELECT * FROM employeeg
+      ORDER BY ROWID DESC)
+WHERE ROWNUM <= 4;
+
+SELECT * 
+FROM(SELECT * FROM employeeg
+        ORDER BY ROWID DESC)
+WHERE ROWNUM <=4;
+
+--Q.8 Count the number of records without count function from any table.
+
+SELECT MAX(ROWNUM) 
+FROM employeeg;
+
+SELECT MAX(ROWNUM) AS total_records
+FROM ser_det;
+
+--Q.9 Delete duplicate records from "Ser_det" table on cid.
+--(note Please rollback after execution).
+
+DELETE FROM ser_det
+WHERE ROWID NOT IN ( SELECT MIN(ROWID)
+                      FROM ser_det
+                      GROUP BY cid);
+
+DELETE FROM employeeg
+WHERE ROWID NOT IN ( SELECT MIN(ROWID)
+                     FROM employeeg
+                     GROUP BY eid);
+ROLLBACK;
+
+--Q.10 Show the name of Customer who have paid maximum amount 
+
+SELECT c.cid,
+       c.cname,
+       SUM(s.total) AS total_spent 
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid
+GROUP BY c.cid, c.cname
+HAVING SUM(s.total) = (
+                       SELECT MAX(total_spent)
+                       FROM (SELECT cid, SUM(total) AS total_spent
+                       FROM ser_det
+                       GROUP BY cid ));
+    
+      
+    
+SELECT * FROM ser_det
+
+SELECT cid, total
+FROM ser_det
+WHERE cid = 1002;
+
+SELECT cname FROM customersg 
+WHERE cid IN (SELECT cid FROM ser_det
+              WHERE total = (SELECT MAX(total) 
+                                    FROM ser_det));   (--SUBQUERY)
+
+--Q.11 Display Employees who are not currently working.
+
+SELECT * FROM employeeg
+WHERE edol IS NOT NULL;
+
+--Q.12 How many customers serviced their two wheelers.
+
+SELECT COUNT(cid) FROM ser_det
+WHERE typ_veh = 'TWO WHEELER';
+
+--Q.13 List the Purchased Items which are used for Customer Service with Unit of that Item.
+
+SELECT DISTINCT s1.spname,
+       s1.spunit
+FROM SPAREPARTS s1
+JOIN ser_det s
+ON s1.spid = s.spid;
+
+SELECT sp.spname,
+       sp.spunit
+FROM spareparts sp
+WHERE EXISTS (SELECT 1
+                FROM ser_det s
+                WHERE s.spid = sp.spid );
+                
+SELECT spname, spunit 
+FROM spareparts
+WHERE spid IN (SELECT spid FROM ser_det);
+
+SELECT * FROM purchase;
+
+--Q.14 Customers who have Colored their vehicles.
+
+SELECT c.cname,
+       s.typ_ser
+FROM customersg c
+INNER JOIN ser_det s
+ON c.cid = s.cid
+WHERE s.typ_ser = 'COLOR';
+
+SELECT cname FROM CUSTOMERSG
+WHERE CID IN (SELECT CID 
+              FROM SER_DET
+              WHERE TYP_SER = 'COLOR');
+
+--Q.15 Find the annual income of each employee inclusive of Commission
+
+SELECT 
+    e.eid,
+    (nvl(e.esal,0) * 12) + NVL(SUM(s.comm), 0) AS annual_income
+FROM employeeg e
+LEFT JOIN ser_det s
+       ON e.eid = s.eid
+GROUP BY e.eid, e.esal
+ORDER BY annual_income DESC;
+
+SELECT e.eid,
+       e.ename,
+       (NVL(e.esal,0) * 12) + NVL(SUM(s.comm),0) AS annual_inc
+FROM employeeg e
+LEFT JOIN ser_det s
+ON e.eid = s.eid
+GROUP BY e.eid, e.ename, esal
+ORDER BY annual_inc DESC;
+
+--Q.16 Vendor Names who provides the engine oil.
+
+SELECT vname FROM vendors
+WHERE vid IN(SELECT vid 
+              FROM purchase
+              WHERE spid IN(SELECT spid
+                             FROM Spareparts
+                             WHERE spname IN ('TWO WHEELER ENGINE OIL','FOUR WHEELER ENGINE OIL')));
+
+SELECT DISTINCT v.vname
+FROM vendors v
+JOIN purchase p
+ON v.vid = p.vid
+JOIN spareparts s  
+ON p.spid = s.spid
+WHERE s.spname LIKE  '%ENGINE OIL%' ;
+     --OR
+WHERE s.spname IN ('TWO WHEELER ENGINE OIL','FOUR WHEELER ENGINE OIL');
+
+SELECT * FROM spareparts
+--Q.17 Total Cost to purchase the Color and name the color purchased.
+
+SELECT s.spname AS color,
+       sum(p.total) AS total_cost
+FROM purchase p
+JOIN spareparts s
+ON p.spid = s.spid
+WHERE spname LIKE '%COLOUR%' 
+GROUP BY s.spname;
+
+SELECT s.spname AS colour,
+       SUM(p.total) AS total_cost
+FROM purchase p
+JOIN spareparts s
+ON p.spid = s.spid
+WHERE spname LIKE '%COLOUR%'
+GROUP BY s.spname; 
+
+SELECT * FROM purchase
+WHERE spid = 4009;
+
+--Q.18 Purchased Items which are not used in "Ser_det".
+
+SELECT  DISTINCT p.spid
+FROM purchase p
+LEFT JOIN ser_det s
+ON p.spid = s.spid
+WHERE s.spid IS NULL;
+
+SELECT DISTINCT p.spid FROM purchase p
+WHERE NOT exists( SELECT 1
+                  FROM ser_det s
+                  WHERE p.spid = s.spid);
+                  
+SELECT DISTINCT spid FROM purchase
+WHERE spid NOT IN (SELECT spid 
+                    FROM ser_det);--(gives error if ser_det has null values)
+                               
+--Q.19 Spare Parts Not Purchased but existing in Sparepart
+
+SELECT s.spid, s.spname
+FROM spareparts s
+LEFT JOIN purchase p
+ON s.spid = p.spid
+WHERE p.spid IS NULL;
+
+SELECT DISTINCT s.spid, s.spname 
+FROM spareparts s
+WHERE NOT exists( SELECT 1
+                  FROM purchase p
+                  WHERE p.spid = s.spid);
+                  
+SELECT spid, spname
+FROM spareparts
+
+MINUS
+
+SELECT s.spid, s.spname
+FROM spareparts s
+JOIN purchase p
+ON s.spid = p.spid;
+
+SELECT spid , spname 
+FROM spareparts
+WHERE spid NOT IN (SELECT spid 
+                  FROM purchase);
+
+--Q.20 Calculate the Profit/Loss of the Firm. consider one month salary of each 
+SELECT
+    (SELECT SUM(total) - SUM(comm) FROM ser_det)
+  - (SELECT SUM(esal)  FROM employeeg) AS profit_or_loss
+FROM dual;
+
+SELECT * FROM ser_det
+SELECT * FROM employeeg
+
+--Q.21 Specify the names of customers who have serviced their vehicles more than one time.
+
+SELECT c.cname,
+       COUNT(*) AS no_ofservices
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid
+GROUP BY cname
+HAVING COUNT(*) > 1;
+
+--Q.22 List the Items purchased from vendors locationwise.
+
+SELECT v.vid,
+        v.vname,
+        p.spid,
+        v.vadd
+FROM vendors v
+JOIN purchase p
+ON v.vid = p.vid
+
+--Q.23 Display count of two wheeler and four wheeler from ser_details
+
+SELECT typ_veh,
+       COUNT(*)AS two_wheeler 
+FROM ser_det
+GROUP BY typ_veh;
+
+--Q24 Display name of customers who paid highest SPGST and for which item 
+SELECT c.cname,
+       s.sp_gst
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid 
+WHERE s.sp_gst = (SELECT MAX(sp_gst) 
+                  FROM ser_det)
+
+SELECT * FROM ser_det
+SELECT * FROM spareparts
+SELECT * FROM vendors
+
+--Q25 Display vendors name who have charged highest SPGST rate for which item
+
+SELECT DISTINCT v.vname, s1.sp_gst, s.spname 
+FROM spareparts s, vendors v, ser_det s1, purchase p
+WHERE s.spid = p.spid
+AND v.vid = p.vid
+AND s1.sp_gst = ( SELECT MAX(sp_gst) 
+                 FROM ser_det);
+                 
+SELECT DISTINCT v.vname, s1.sp_gst, s.spname 
+FROM purchase p
+JOIN ser_det s1
+ON s.spid = s1.spid
+JOIN vendors v
+ON v.vid = p.vid 
+WHERE s1.sp_gst = (SELECT MAX(sp_gst) FROM ser_det);
+
+SELECT DISTINCT
+       v.vname,
+       sd.sp_gst,
+       s.spname
+FROM purchase p
+JOIN vendors v
+     ON v.vid = p.vid
+JOIN spareparts s
+     ON s.spid = p.spid
+JOIN ser_det sd
+     ON sd.spid = s.spid
+WHERE sd.sp_gst = (SELECT MAX(sp_gst)
+                   FROM ser_det);
+
+--Q26 list name of item and employee name who have received item 
+
+SELECT DISTINCT  e.ename,
+                 s.spname
+FROM employeeg e
+JOIN purchase p 
+ON e.eid = rcv_eid
+JOIN spareparts s
+ON p.spid = s.spid;
+
+SELECT * FROM employeeg
+SELECT * FROM customersg
+sELECT * FROM purchase
+SELECT * FROM ser_det
+SELECT * FROM vendors
+--Q27 Display the Name and Vehicle Number of Customer who serviced his vehicle, 
+--And Name the Item used for Service, And specify the purchase date of that Item 
+--with his vendor and Item Unit and Location, And employee Name who serviced the 
+--vehicle. for Vehicle NUMBER "MH-14PA335".'
+
+SELECT 
+    c.cname            AS customer_name,
+    s1.veh_no          AS vehicle_number,
+    sp.spname          AS item_name,
+    p.pdate            AS purchase_date,
+    v.vname            AS vendor_name,
+    sp.spunit          AS item_unit,
+    v.vadd             AS item_location,
+    e.ename            AS employee_name
+FROM ser_det s1
+JOIN customersg c
+    ON c.cid = s1.cid
+JOIN spareparts sp
+    ON s1.spid = sp.spid
+JOIN purchase p
+    ON p.spid = sp.spid
+JOIN vendors v
+    ON p.vid = v.vid
+JOIN employeeg e
+    ON s1.eid = e.eid
+WHERE s1.veh_no = 'MH14PA335';
+
+--Q28 who belong this vehicle  MH-14PA335" Display the customer name 
+SELECT cname FROM customersg
+WHERE cid = (SELECT cid FROM ser_det
+            WHERE veh_no = 'MH14PA335');
+            
+--Q29 Display the name of customer who belongs to New York and when he 
+--/she service their  vehicle on which date 
+SELECT ser_date FROM ser_det
+WHERE cid IN (SELECT cid FROM customersG
+             WHERE cadd = 'NEW YORK');
+ 
+--Q 30 from whom we have purchased items having maximum cost?
+
+SELECT v.vname
+FROM vendors v
+JOIN purchase p 
+ON v.vid = p.vid
+WHERE p.total = (SELECT MAX(total) FROM purchase);
+
+SELECT vname FROM vendors
+WHERE vid = (SELECT vid FROM purchase
+            WHERE total = (SELECT MAX(total) FROM purchase));
+
+--Q31 Display the names of employees who are not working as Mechanic and that 
+--employee done services.
+
+SELECT e.ename  
+FROM employeeg e
+JOIN ser_det s
+ON e.eid =s.eid;
+
+--Q32 Display the various jobs along with total number of employees in each job.
+--The output should contain only those jobs with more than two employees.
+
+SELECT  ejob, COUNT(eid) 
+FROM employeeg
+GROUP BY ejob
+HAVING COUNT(eid) > 2;
+
+SELECT * FROM ser_det
+
+--Q33 Display the details of employees who done service  and give them rank 
+--according to their no. of services .
+
+SELECT e.eid,e.ename,e.esal,e.eadd,
+       COUNT(s.eid) AS no_of_service,
+       DENSE_RANK() OVER(ORDER BY COUNT(s.eid) DESC) AS service_rank
+FROM employeeg e 
+JOIN ser_det s
+ON s.eid = e.eid
+GROUP BY  e.eid,e.ename ,e.esal,e.eadd;
+
+--Q 34 Display those employees who are working as Painter and fitter and 
+--who provide service and total count of service done by fitter and painter 
+SELECT e.ename ,
+       COUNT(*) AS no_of_services
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid
+WHERE ejob IN ('FITTER','PAINTER')
+GROUP BY e.ename;
+
+SELECT * FROM employeeg
+
+--Q35 Display employee salary and as per highest salary provide Grade to employee 
+SELECT esal,
+       CASE 
+         WHEN esal > = 2200 THEN 'HIGH'
+         WHEN esal > = 1200 THEN 'MEDIUM'
+         ELSE 'LOW'
+       END AS salary_grade
+FROM employeeg;
+
+--Q36  display the 4th record of emp table without using group by and ROWID
+
+SELECT eid,ename,esal
+FROM (SELECT eid,esal,ename,
+       DENSE_RANK() OVER (ORDER BY esal DESC) AS salary_rank
+        FROM employeeg)
+WHERE salary_rank  = 4;
+
+--Q37 Provide a commission 100 to employees who are not earning any commission.
+SELECT * FROM SER_DET
+
+UPDATE SER_DET
+SET COMM = 100
+WHERE NVL(COMM , 0) = 0;
+
+--Q38 write a query that totals no. of services  for each day and place the results
+--IN descending ORDER
+
+SELECT s.ser_date,c.cadd, COUNT(*) AS no_of_services 
+FROM ser_det s
+JOIN customersg c
+ON s.cid = c.cid
+GROUP BY  s.ser_date,c.cadd
+ORDER BY s.ser_date DESC ;
+
+--Q39 Display the service details of those customer who belong from same city 
+
+SELECT c1.cname,
+
+       s.*
+FROM customersg c1
+JOIN customersg c2
+ON c1.cadd = c2.cadd
+JOIN ser_det s
+ON c1.cid = s.cid
+WHERE c1.cid != c2.cid;
+
+SELECT 
+    c.cname,
+    c.cadd,
+    s.*
+FROM customersg c
+JOIN ser_det s
+    ON c.cid = s.cid
+WHERE c.cadd IN (
+        SELECT cadd
+        FROM customersg
+        GROUP BY cadd
+        HAVING COUNT(*) > 1);
+        
+SELECT * FROM ser_det
+SELECT * FROM employeeg
+SELECT * FROM customersg
+--Q40 write a query join customers table to itself to find all pairs of
+--customers service by a single employee
+
+SELECT DISTINCT
+       c1.cname AS customer1,
+       c2.cname AS customer2,
+       e.ename
+FROM ser_det s1
+JOIN ser_det s2
+     ON s1.eid = s2.eid
+    AND s1.cid < s2.cid
+JOIN customersg c1
+     ON s1.cid = c1.cid
+JOIN customersg c2
+     ON s2.cid = c2.cid
+JOIN employeeg e
+     ON s1.eid = e.eid;
+
+--Q41 List each service number follow by name of the customer who
+--made  that service
+
+SELECT s.sid,
+       cname
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid;
+
+SELECT * FROM ser_det
+
+--Q42 Write a query to get details of employee and provide rating on basis of  
+-- services provide by employee  .Note (rating should be like A,B,C,D)
+SELECT e.eid , e.ename,
+       COUNT(SID) AS no_of_services,
+      CASE
+         WHEN COUNT(SID) >= 10 THEN 'A'
+         WHEN COUNT(SID) BETWEEN 6 AND 9 THEN 'B'
+         WHEN COUNT(SID) BETWEEN 3 AND 5 THEN 'C'
+         ELSE 'D' 
+           END AS RESULT 
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid
+GROUP BY e.eid , e.ename;          
+
+SELECT * FROM vendors
+--Q43 Write a query to get maximum service amount of each customer with their customer details ?
+
+SELECT c.cid, c.cname , c.cadd,
+       MAX(ser_amt) AS max_ser_amt
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid
+GROUP BY c.cid, c.cname , c.cadd
+ORDER BY cid;
+
+--Q44 Get the details of customers with his total no of services ?
+
+SELECT c.cid,
+       c.cname,
+       c.cadd,
+       c.c_contact,
+       COUNT(*) AS no_of_services
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid
+GROUP BY c.cid, c.cname,c.cadd,c.c_contact;
+
+SELECT * FROM customersg
+
+--Q45 From which location sparpart purchased  with highest cost ?
+
+SELECT vadd FROM vendors
+WHERE vid =(SELECT vid 
+           FROM purchase
+           WHERE total =(SELECT max(total) FROM purchase));
+          
+SELECT v.vadd, p.total
+FROM vendors v
+JOIN purchase p
+ON v.vid =p.vid
+WHERE total =(SELECT max(total) FROM purchase);
+
+--Q46 Get the details of employee with their service details who has salary is null
+
+SELECT e.eid,
+    e.ename,
+    e.esal,
+    s.sid,
+    s.typ_ser,
+    s.ser_amt,
+    s.spid
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid
+WHERE e.esal IS NULL
+
+--Q47 find the sum of purchase location wise 
+
+SELECT ltrim(sum(p.total)) AS total, v.vadd
+FROM purchase p
+JOIN vendors v
+ON p.vid = v.vid
+GROUP BY v.vadd;
+
+SELECT * FROM purchase
+--Q48 write a query sum of purchase amount in word location wise ?
+SELECT 
+      e.eadd,
+      to_char(to_date(trunc(SUM(p.total)),'J'),'JSP') AS total_in_words
+FROM purchase p
+JOIN employeeg e
+ON p.rcv_eid = e.eid
+GROUP BY e.eadd;
+
+--ROUND / TRUNC the sum before converting
+--Ensure the value is within Julian range
+--Convert to words using JSP
+SELECT * FROM purchase
+SELECT * FROM ser_det
+
+--Q49 Has the customer who has spent the largest amount money has been give highest
+-- rating
+SELECT 
+   CASE 
+     WHEN EXISTS( SELECT 1
+                  FROM customersg
+                  WHERE rating = (SELECT MAX(rating) 
+                                         FROM customersg)
+                  AND cid IN (SELECT cid FROM ser_det
+                              GROUP BY cid
+                              HAVING SUM(total)= 
+                                                 (SELECT MAX(SUM(total)) 
+                                                  FROM ser_det
+                                                  GROUP BY cid)))
+         THEN 'Yes'
+           ELSE 'No'
+             END AS RESULT
+             FROM dual;
+                             
+
+--Q50 select the total amount in service for each customer for which
+--the total is greater than the amount of the largest service amount in the TABLE
+
+SELECT c.cname,s.cid, SUM(s.total) 
+FROM ser_det s
+JOIN customersg c
+ON s.cid = c.cid
+HAVING sum(total) > (SELECT MAX(ser_amt) FROM ser_det)
+GROUP BY c.cname,s.cid;
+
+--Q51 List the customer name and sparepart name used for their vehicle and vehicle type
+
+SELECT c.cname, s1.spname, s.typ_veh
+FROM customersg c
+JOIN ser_det s
+ON c.cid = s.cid
+JOIN spareparts s1
+ON s.spid = s1.spid;
+
+--Q52 Write a query to get spname ,ename,cname quantity ,rate ,service amount for 
+--record exist in service table 
+
+SELECT s.spname,    
+       e.ename,
+       c.cname,
+       s.sprate AS rate,
+       s1.qty,
+       s1.ser_amt AS servis_amt
+FROM ser_det s1
+JOIN spareparts s
+ON s1.spid = s.spid
+JOIN customersg c
+ON s1.cid = c.cid
+JOIN employeeg e
+ON s1.eid = e.eid;
+    
+--Q53 specify the vehicles owners who’s tube damaged.
+
+SELECT  DISTINCT cname FROM customersg
+WHERE cid IN (SELECT cid FROM ser_det
+              WHERE typ_ser = 'TUBE DAMAGED');
+        
+--Q.54 Specify the details who have taken full service.
+
+SELECT * FROM customersg
+WHERE cid IN (SELECT cid FROM ser_det
+              WHERE typ_ser = 'FULL SERVICING');
+
+--Q.55 Select the employees who have not worked yet and left the job.
+
+SELECT e.eid, e.ename
+FROM employeeg e
+LEFT JOIN ser_det s
+ON e.eid = s.eid
+WHERE e.edol IS NOT NULL
+AND s.eid IS NULL;
+
+SELECT * FROM employeeg
+SELECT * FROM ser_det
+
+--Q.56  Select employee who have worked first ever.
+
+SELECT e.eid, 
+       e.ename,
+       s.ser_date
+FROM employeeg e
+JOIN ser_det s
+ON e.eid = s.eid
+WHERE s.ser_date = (
+        SELECT MIN(ser_date)
+        FROM ser_det );  --“We compare service dates with the minimum service 
+                         --date to get the employee(s) who worked first.”
+SELECT ename FROM employeeg
+WHERE eid = (SELECT eid FROM ser_det
+             WHERE ser_date = (SELECT MIN(ser_date) FROM ser_det));
+
+--Q.57 Display all records falling in odd date
+
+SELECT * FROM ser_det
+WHERE MOD(EXTRACT(DAY FROM ser_date),2) != 0 ;
+
+SELECT *
+FROM ser_det
+WHERE MOD(TO_NUMBER(TO_CHAR(ser_date, 'DD')), 2) = 1;
+
+--Q.58 Display all records falling in even date
+
+SELECT *
+FROM ser_det
+WHERE MOD(EXTRACT(DAY FROM ser_date), 2) = 0;  --best
+
+SELECT *
+FROM ser_det
+WHERE MOD(TO_NUMBER(TO_CHAR(ser_date, 'DD')), 2) = 0;
+
+--Q.59 Display the vendors whose material is not yet used.
+
+SELECT v.vname
+FROM VENDORS v
+JOIN purchase p
+ON v.vid = p.vid
+LEFT JOIN ser_det s --apply null ob this table
+ON p.spid = s.spid
+WHERE s.spid IS NULL ;
+
+SELECT * FROM ser_det
+SELECT * FROM spareparts
+SELECT * FROM purchase
+--Q.60 Difference between purchase date and used date of spare part.
+
+SELECT (s.ser_date - p.pdate ) AS date_difference
+FROM purchase p
+JOIN ser_det s
+ON p.spid = s.spid;
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
